@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハードゲイファンサイト | セイ！フォ～！！！</title>
+    <!-- Google Fonts: 日本語フォントを最適化 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- アイコンを表示するためのライブラリを読み込む -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- 【ヘッダー】学校サイト風のシンプルな構成 -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ハードゲイ<span>ファンサイト</span></h1>
+            </div>
+            <nav>
+                <ul class="header-menu ho-mu">
+                    <li> <div></div> <a href="index.html">ホーム</a></li>
+                    <li><a href="news.html">最新ニュース</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <!-- 【メインビジュアル】横幅いっぱいのスライダー（風） -->
+    <section class="main-visual">
+        <div class="mv-content">
+            <div class="mv-text">
+                <h2>世も末フォ〜⤴︎!!!</h2>
+                <p>ハードな麺かソフトな麺か</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 【メイン部分】 -->
+<main class="container">
+    <section class="hg-intro">
+        <!-- 画像を上に、テキストを下に。PCでは横並びに自動調整される構造 -->
+        <div class="hg-image-container">
+            <img src="/img/gei.jpg" alt="ハードゲイ" class="responsive-img">
+        </div>
+        
+        <div class="hg-text-container">
+            <h2 class="profile-title">レイザーラモンHG（ハードゲイ）とは？</h2>
+            <p>ハードゲイ（HG）は、日本のお笑い界で強いインパクトを残した人気芸人です。黒いレザー衣装にサングラスという個性的なスタイルで登場し、<strong>「フォー！」</strong>という決めゼリフで一躍話題となりました。</p>
+            
+            <p>お笑いコンビ「レイザーラモン」のメンバーで、エネルギッシュなキャラクターと全力で体を張る芸風が特徴。そのユーモアとサービス精神から、世代を超えて親しまれています。</p>
+            
+            <p>近年はトレーニングや料理など多方面で活躍中。進化し続ける姿が多くの支持を集めています。</p>
+
+            <div class="highlight-box">
+                <h3>代表的な特徴</h3>
+                <ul>
+                    <li>「フォー！」の決めゼリフ</li>
+                    <li>黒いレザーコスチューム</li>
+                    <li>圧倒的なテンションと明るさ</li>
+                    <li>親しみやすい人柄</li>
+                    <li>マルチな才能</li>
+                </ul>
+            </div>
+            <p>一発のブームで終わらない実力派芸人として、今も愛され続けている存在です。</p>
+        </div>
+    </section>
+
+<!-- 【お知らせ欄】日付 + タイトルのリスト -->
+        <section class="news-section">
+            <h2 class="section-title">お知らせ</h2>
+            <div class="news-list">
+                <article class="news-item">
+                    <span class="date">2026.05.10</span>
+                    <span class="category">更新情報</span>
+                    <a href="#" class="title">新芸人（狩野英孝さん）を追加しました</a>
+                </article>
+                <article class="news-item">
+                                                        </article>
+            </div>
+        </section>
+
+
+        <!-- 【検索機能】リアルタイムフィルタリング -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="芸人名で検索...">
+                <select id="genreFilter">
+                    <option value="">全てのジャンル</option>
+                    <option value="コント">コント</option>
+                    <option value="漫才">漫才</option>
+                    <option value="ピン芸">ピン芸</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- 【注目芸人カード】JavaScriptで動的に表示 -->
+        <section class="cards-section">
+            <h2 class="section-title">注目芸人紹介</h2>
+            <div class="card-grid" id="cardGrid">
+                <!-- ここにJavaScriptでカードが生成されます -->
+            </div>
+        </section>
+
+        
+    <!-- 【詳細モーダル】 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 【フッター】 -->
+    <footer>
+    <div class="footer-container">
+        <h3 style="color: #fff; margin-bottom: 15px; font-size: 1rem;">公式SNSリンク</h3>
+        
+        <!-- 各芸人ごとのSNSアイコンをグループ化 -->
+        <div class="social-links-grid">
+            <!-- レイザーラモン (HG) -->
+            <div class="artist-links">
+                <span class="artist-name">レイザーラモン</span>
+                <a href="https://youtube.com/@hg-xr5vh" target="_blank" title="HG個人YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://youtube.com/channel/UCls70n_ydZjkI3wohUU0R4A" target="_blank" title="レイザーラモンコンビYouTube"><i class="fas fa-users"></i></a>
+            </div>
+
+            <!-- 狩野英孝 -->
+            <div class="artist-links">
+                <span class="artist-name">狩野英孝</span>
+                <a href="https://x.com/kano9x" target="_blank" title=狩野英孝X><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kano9x/" target="_blank" title=狩野英孝Instagram><i class="fab fa-instagram"></i></a>
+                <a href="http://www.youtube.com/@eikogo3822" target="_blank" title=狩野英孝YouTube><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- 小島よしお -->
+            <div class="artist-links">
+                <span class="artist-name">小島よしお</span>
+                <a href="https://x.com/yoshiopiiya" target="_blank"title=小島よしおX><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kojimayoshiopiya/" target="_blank"title=小島よしおInstagram><i class="fab fa-instagram"></i></a>
+                <a href="http://www.youtube.com/@educationOpapi" target="_blank"title=小島よしおYouTube><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- サンシャイン池崎 -->
+            <div class="artist-links">
+                <span class="artist-name">サンシャイン池崎</span>
+                <a href="https://x.com/ikezaki_YEAH" target="_blank"title=サンシャイン池崎X><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/ikezaki_yeah/" target="_blank"title=サンシャイン池崎Instagram><i class="fab fa-instagram"></i></a>
+                <a href="http://www.youtube.com/@%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E6%B1%A0%E5%B4%8E%E3%81%AE%E8%B6%85%E7%A9%BA%E5%89%8D%E7%B5%B6" target="_blank"title=サンシャイン池崎YouTube><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- とにかく明るい安村 -->
+            <div class="artist-links">
+                <span class="artist-name">とにかく明るい安村</span>
+                <a href="https://x.com/tonikakuwearing" target="_blank"title=とにかく明るい安村X><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/tonikaku.a.yasumura/" target="_blank"title=とにかく明るい安村Instagram><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Tonikaku_TONY_Yasumura" target="_blank"title=とにかく明るい安村YouTube><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <br><p style="font-size: 0.8rem; line-height: 1.5; color: #e1dbdb;">
+            サイト制作者：冷麺<br><b>
+            ※このサイトは非公式サイトです。</b>
+        </p>
+        <p class="copyright" style="margin-top: 30px;">&copy; 2026 ハードゲイファンサイト All Rights Reserved.</p>
+            </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

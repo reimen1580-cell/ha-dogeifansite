@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | ハードゲイファンサイト</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* スマホで横幅からはみ出さないための調整 */
+        .container {
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .message-box-container {
+            background: #fdfdfd;
+            border: 2px solid #003366;
+            padding: 20px; /* スマホ用に余白を狭く */
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 20px auto;
+        }
+        .form-textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box; /* 枠線がはみ出すのを防ぐ */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px; /* スマホでズームされないためのサイズ */
+        }
+        .submit-btn {
+            background: #003366;
+            color: #fff;
+            padding: 15px 0;
+            width: 100%; /* スマホで押しやすいよう横いっぱいに */
+            max-width: 300px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* SNSリンクのスタイル */
+        .sns-links {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .sns-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .tw { background: #1DA1F2; } /* X/Twitter */
+        .ig { background: #E1306C; } /* Instagram */
+        .yt { background: #FF0000; } /* YouTube */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>ハードゲイ<span>ファンサイト</span></h1></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="news.html">最新ニュース</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">ご意見・メッセージ箱</h2>
+        
+        <div class="message-box-container">
+            <p style="font-size: 0.9rem; margin-bottom: 20px;">※匿名で送信されるフォ～！！！</p>
+            <form action="https://formspree.io/f/mwvywpwe" method="POST">
+                <textarea name="message" class="form-textarea" placeholder="メッセージを入力してください" required></textarea>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" class="submit-btn">送信する</button>
+                </div>
+            </form>
+        </div>
+
+</body>
+</html>
